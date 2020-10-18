@@ -1,13 +1,13 @@
 <template>
   <div class="hello">
-     <div class="font-weight-bold w-100 text-center" style="font-size:7rem;">
+     <div class="font-weight-bold w-100 text-center title" >
       Olá Amigo.
       
     </div>
     
     <div class="row mt-5">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+      <div class="col-1 col-md-4"></div>
+      <div class="col-10 col-md-4">
         <input id="disabled-wrapper" type="text" v-model="code" class="input" placeholder="Insere aqui o código que recebeste do pai natal" v-mask="'######'" :style="triedToSubmit && code.trim().length !== 6 ? 'border-bottom: solid 3px #dc3545' : ''">
                         <div class="row">
                           <div class="col-md-8">
@@ -31,7 +31,7 @@
                              
          
       </div>
-      <div class="col-md-4"></div>
+      <div class="col-1 col-md-4"></div>
     </div>
   </div>
 </template>
@@ -78,6 +78,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style type="text/css">
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 6rem !important;
+    text-align: left !important;
+    padding:20px;
+  }
+}
+.title{
+  font-size: 7rem;
+}
 h3 {
   margin: 40px 0 0;
 }

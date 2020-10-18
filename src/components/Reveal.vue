@@ -10,12 +10,12 @@ padding: 50px;
 
 
 
-    <vue-typed-js :strings="['Estás pronto para descobrir?']" class="d-block" @onComplete="showButton = true" >
+    <vue-typed-js :strings="['Estás pronto para descobrir?']" class="d-block" @onComplete="showButton = true" v-if="!reveal">
       <h1 v-if="!reveal"><span class="typing" v-if="!reveal"></span></h1>
     </vue-typed-js>
     
     </div>
-    <audio controls id="player" autoplay loop  @click="done()" hidden>
+    <audio controls id="player" loop  @click="done()" hidden>
       <source src="@/assets/music.mp3" type="audio/mpeg" >
       Your browser does not support the audio element.
     </audio>
@@ -27,7 +27,7 @@ padding: 50px;
 
     <transition name="fade" mode="in-out">
       
-      <div class="font-weight-bold w-100 text-center" style="font-size:7rem;" v-if="reveal">
+      <div class="font-weight-bold w-100 text-center title" v-if="reveal">
         <video autoplay muted loop id="myVideo" style="  position: fixed;
   right: 0;
   bottom: 0;
@@ -36,14 +36,13 @@ padding: 50px;
   z-index:-1">
   <source src="@/assets/video.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
-</video>
-        {{name}}
+</video>{{name.trim()}}
         
       </div>
     </transition>
     <transition name="bounce">
           <div v-if="reveal">
-            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt="" width="300" >
+            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt=""  style="width:100%; max-width: 300">
           </div>
         </transition>
     </div>
@@ -79,6 +78,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style type="text/css">
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 3rem !important;
+    text-align: center !important;
+    padding:20px;
+  }
+  .hello{
+    padding-top: 0px !important;
+  }
+}
+.title{
+  font-size: 7rem;
+}
 .bounce-enter-active {
   animation: bounce-in .5s;
 }
