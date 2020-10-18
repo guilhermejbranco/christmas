@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script>
+<script type="text/javascript">
 import Input from '@/components/Input.vue'
 import Processing from '@/components/Processing.vue'
 import Reveal from '@/components/Reveal.vue'
@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style type="text/css">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

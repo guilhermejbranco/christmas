@@ -6,12 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    
-    "deploy": "node scripts/gh-pages-deploy.js"
+    "deploy": "node scripts/gh-pages-deploy.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
     "v-mask": "^2.2.3",
     "vue": "^2.6.11",
     "vue-typed-js": "^0.1.2"

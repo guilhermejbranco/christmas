@@ -44,7 +44,7 @@ padding: 50px;
   </div>
 </template>
 
-<script>
+<script type="text/javascript">
 
 export default {
   name: 'Processing',
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style type="text/css">
 .media-controls.inline .time-control, .media-controls.inline .status-label{
   display:none !important;
 }
