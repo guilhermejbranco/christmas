@@ -39,7 +39,7 @@ padding: 50px;
     </transition>
     <transition name="bounce">
           <div v-if="reveal">
-            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt=""  style="width:100%; max-width: 300px">
+            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt=""  style="width:100%; max-width: 500px">
           </div>
         </transition>
     </div>
