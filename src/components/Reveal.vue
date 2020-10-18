@@ -15,13 +15,10 @@ padding: 50px;
     </vue-typed-js>
     
     </div>
-    <audio controls id="player" loop  @click="done()" hidden>
-      <source src="@/assets/music.mp3" type="audio/mpeg" >
-      Your browser does not support the audio element.
-    </audio>
+    
     <div>
       <transition name="fade" mode="in-out">
-      <button onclick="document.getElementById('player').play()" class="btn btn-dark" @click="done()" squared style="background-color:black; font-weight:bold" v-if="showButton">Revelar</button>
+      <button  class="btn btn-dark" @click="done()" squared style="background-color:black; font-weight:bold" v-if="showButton">Revelar</button>
       </transition>
     </div>
 
@@ -42,7 +39,7 @@ padding: 50px;
     </transition>
     <transition name="bounce">
           <div v-if="reveal">
-            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt=""  style="width:100%; max-width: 300">
+            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt=""  style="width:100%; max-width: 300px">
           </div>
         </transition>
     </div>

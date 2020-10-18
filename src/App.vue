@@ -21,6 +21,10 @@
         <Reveal :name="name"/>
       </div>
     </transition>
+    <audio controls id="player" loop hidden>
+      <source src="@/assets/music.mp3" type="audio/mpeg" >
+      Your browser does not support the audio element.
+    </audio>
     
   </div>
 </template>

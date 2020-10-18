@@ -24,7 +24,7 @@
                             </div>
                           <div class="col-md-4 text-right">
                             <span  class="d-inline-block" tabindex="0">
-                       <b-button  variant="dark" squared style="background-color:black; font-weight:bold"  class="mt-3 text-right" @click="submit()">Submeter</b-button>
+                       <b-button  variant="dark" onclick="document.getElementById('player').play()" squared style="background-color:black; font-weight:bold"  class="mt-3 text-right" @click="submit()">Submeter</b-button>
   </span>
                           </div>
                         </div>
@@ -32,7 +32,9 @@
          
       </div>
       <div class="col-1 col-md-4"></div>
+      
     </div>
+    
   </div>
 </template>
 
@@ -58,7 +60,7 @@ export default {
         "385311" : "Guilherme Branco",
         "613864" : "João Olival",
         "413587" : "Pedro Soares",
-        "905948" : "Lucas",
+        "905948" : "Lucas Laporta",
         "414688" : "Margarida Dias",
         "205744" : "Leonor Carrapatoso",
         "419229" : "Diogo Ferreira",
