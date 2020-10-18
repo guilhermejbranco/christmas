@@ -38,8 +38,14 @@ padding: 50px;
   Your browser does not support HTML5 video.
 </video>
         {{name}}
+        
       </div>
     </transition>
+    <transition name="bounce">
+          <div v-if="reveal">
+            <img :src="require('@/assets/imgs/' +  name + '.jpg')" alt="" width="300" >
+          </div>
+        </transition>
     </div>
   </div>
 </template>
@@ -73,6 +79,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style type="text/css">
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .media-controls.inline .time-control, .media-controls.inline .status-label{
   display:none !important;
 }
