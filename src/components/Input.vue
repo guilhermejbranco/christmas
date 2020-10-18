@@ -8,7 +8,7 @@
     <div class="row mt-5">
       <div class="col-1 col-md-4"></div>
       <div class="col-10 col-md-4">
-        <input id="disabled-wrapper" type="text" v-model="code" class="input" placeholder="Insere aqui o código que recebeste do pai natal" v-mask="'######'" :style="triedToSubmit && code.trim().length !== 6 ? 'border-bottom: solid 3px #dc3545' : ''">
+        <input id="disabled-wrapper" type="text" v-model="code" class="input" placeholder="Põe aqui o código que recebeste do pai natal" v-mask="'######'" :style="triedToSubmit && code.trim().length !== 6 ? 'border-bottom: solid 3px #dc3545' : ''">
                         <div class="row">
                           <div class="col-md-8">
                             <transition name="fade" mode="out-in">
